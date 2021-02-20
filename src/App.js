@@ -10,18 +10,16 @@ import Map from "./components/map/map";
 function App() {
   return (
     <div>
-      <Navbar/>
+      <Navbar />
       <Router>
         <Switch>
           <Route exact path="/">
             <Home />
             <Tours />
+            <Map/>
           </Route>
           <Route path="/restaurants">
-            <Restaurants/>
-          </Route>
-          <Route path='/map' >
-            <Map/>
+            <Restaurants />
           </Route>
         </Switch>
       </Router>

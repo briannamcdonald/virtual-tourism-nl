@@ -1,19 +1,139 @@
 import React from "react";
+import { Box, Flex, Heading, IconButton, Button } from "@chakra-ui/react";
+import { FaArrowCircleRight } from "react-icons/fa";
+import { FaArrowCircleLeft } from "react-icons/fa";
+import { FaAngleDoubleRight } from "react-icons/fa";
+
 import Tour from "../tour/tour";
 import whaleImage from "./images/whale.png";
+import icebergImage from "./images/iceberg.png";
+import grosMorneImage from "./images/gros-morne.png";
+import signalHillImage from "./images/signal-hill.png";
+import jellyBeanRowImage from "./images/jellybeanrow.png";
+import lanseAuxMeadowsImage from "./images/lanse-aux-meadows.png";
 
 const Tours = () => {
   return (
-    <Tour
-      title="Whale Watching Tour"
-      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-      location="St. John's"
-      link="/"
-      price="16"
-      image={whaleImage}
-      stars="4.96"
-      type="LIVE"
-    />
+    <Box
+      width={["100%", "90%"]}
+      alignItems="center"
+      justifyContent="center"
+      padding="0.5rem"
+      margin="0 auto"
+      marginTop="2rem"
+      id="Tours"
+    >
+      <Heading margin="0.5rem" marginBottom="1rem">
+        Explore NL with Virtual Tours
+      </Heading>
+      <Flex flexDirection="column">
+        <Heading marginLeft="2.5rem" fontSize="2xl">
+          Bestsellers
+        </Heading>
+        <Flex alignItems="center" justifyContent="center" minWidth="100%">
+          <IconButton
+            icon={<FaArrowCircleLeft />}
+            backgroundColor="transparent"
+            fontSize="2rem"
+          />
+          <Tour
+            title="Whale Watching"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            location="St. John's"
+            link="/"
+            price="16"
+            image={whaleImage}
+            stars="4.96"
+            type="LIVE"
+            heartColor="black"
+          />
+          <Tour
+            title="Iceberg Boat Tour"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            location="Twillingate"
+            link="/"
+            price="12"
+            image={icebergImage}
+            stars="5.00"
+            type="LIVE"
+            heartColor="white"
+          />
+          <Tour
+            title="Gros Morne National Park"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            location="Rocky Harbour"
+            link="/"
+            price="24"
+            image={grosMorneImage}
+            stars="4.89"
+            type="Virtual Reality"
+            heartColor="white"
+          />
+          <IconButton
+            icon={<FaArrowCircleRight />}
+            backgroundColor="transparent"
+            fontSize="2rem"
+          />
+        </Flex>
+        <Flex flexDirection="column" marginTop="2rem">
+          <Heading marginLeft="2.5rem" fontSize="2xl">
+            Historic & Cultural
+          </Heading>
+          <Flex alignItems="center" justifyContent="center" minWidth="100%">
+            <IconButton
+              backgroundColor="transparent"
+              icon={<FaArrowCircleLeft />}
+              fontSize="2rem"
+            />
+            <Tour
+              title="Signal HIll"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              location="St. John's"
+              link="/"
+              price="12"
+              image={signalHillImage}
+              stars="4.92"
+              type="360° Video Tour"
+              heartColor="white"
+            />
+            <Tour
+              title="Jelly Bean Row"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              location="St. John's"
+              link="/"
+              price="14"
+              image={jellyBeanRowImage}
+              stars="5.00"
+              type="LIVE"
+              heartColor="white"
+            />
+            <Tour
+              title="L'Anse aux Meadows"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              location="Great Northern Peninsula"
+              link="/"
+              price="20"
+              image={lanseAuxMeadowsImage}
+              stars="4.85"
+              type="Virtual Reality"
+              heartColor="black"
+            />
+            <IconButton
+              icon={<FaArrowCircleRight />}
+              backgroundColor="transparent"
+              fontSize="2rem"
+            />
+          </Flex>
+        </Flex>
+        <Button
+          colorScheme="teal"
+          margin="1rem auto"
+          rightIcon={<FaAngleDoubleRight />}
+        >
+          See All Experiences
+        </Button>
+      </Flex>
+    </Box>
   );
 };
 

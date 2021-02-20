@@ -1,11 +1,24 @@
-import { SlideFade, Box, useDisclosure, Image, Text, Button } from '@chakra-ui/react';
-import { useRef, useEffect } from 'react';
+import { Box,  Image, Text, Flex,Heading,Link } from '@chakra-ui/react';
+import { StarIcon } from '@chakra-ui/icons';
 import {BsGeoAlt} from 'react-icons/bs';
+import { useRef, useEffect } from 'react';
 
-function MapTooltip({lat,lng,text,imageUrl,isOpen, onToggle, right, top}) {
-    
+function MapTooltip({lat,lng,text,imageUrl,isOpen, onToggle,setIsOpen, right, top,type}) {
+    const ref = useRef()
+    const handleClickOutSide = (e) => {
+		if(ref.current && !ref.current.contains(e.target)){
+			setIsOpen(0)
+		}
+	}
+
+	useEffect(() => {
+		document.addEventListener('click' , handleClickOutSide ,true);
+		return () => {
+			document.removeEventListener('click',handleClickOutSide,true)
+		}
+	});
     return(
-        <Box lat={lat} lng={lng} position="absolute">
+        <Box lat={lat} lng={lng} position="absolute" ref={ref}>
             <BsGeoAlt color={isOpen?'#16acea':"#d71b3b"} 
             size="20px" onClick={onToggle} cursor="pointer" />
             <Box visibility={isOpen?'visible':'hidden'} zIndex="10"
@@ -15,7 +28,7 @@ function MapTooltip({lat,lng,text,imageUrl,isOpen, onToggle, right, top}) {
             <Box  
                 color="black"
                 width="230px"
-                height="200px"
+                height="auto"
                 mt="4"
                 bg="white"
                 rounded="md"
@@ -23,30 +36,25 @@ function MapTooltip({lat,lng,text,imageUrl,isOpen, onToggle, right, top}) {
             >
             <Image src={imageUrl} 
             alt={text} width="230px" height="100px" roundedTop="md"  />
-            <Box p="10px" fontSize="sm">
-            {text}
+            <Flex alignItems="center" p="10px" marginTop="0.8rem" marginBottom="0">
+                <Heading size="sm">
+                    {text}
+                </Heading>
+                <StarIcon ml="10px" mr="5px" color="yellow.400" fontSize="lg"/>
+                <Text>{4}</Text>
+            </Flex>
+            <Box pl="10px" pb="5px" d="flex">
+                <Text>Tour Type : </Text>
+                <Text>{type}</Text>
             </Box>
+            <Box pr="20px" pb="10px" d="flex" justifyContent="flex-end">
+            <Link >Learn More</Link>
+            </Box>
+            
         </Box>
             </Box>
         </Box>
     )
-    // return(
-    //     <div lat={lat} lng={lng}>
-    //     <PopoverTrigger>
-    //         <BsGeoAlt size="20px"/>
-    //     </PopoverTrigger>
-    //     <PopoverContent width="250px" height="250px">
-    //     <Image src={imageUrl} 
-    //         alt={text} width="250px" height="100px" roundedTop="md"  />
-    //         <Box p="10px" fontSize="sm">
-    //         {text}
-    //         </Box>
-    //         <Box p="10px">
-    //             <Button color="#16acea" >Learn More</Button>
-    //         </Box>
-    //     </PopoverContent>
-    //     </div>
-    // )
 }
 
 export default MapTooltip;

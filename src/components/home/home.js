@@ -3,6 +3,11 @@ import { Box, Flex, Heading, Image, Text, Button } from "@chakra-ui/react";
 import jellyBeanRowImage from "./images/jellybeanrow2.png";
 
 const Home = () => {
+  const scrollTo = (id) => {
+    const element = document.getElementById(id);
+    element.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <Box width="100%" height="90vh" textAlign="center" letterSpacing="wide">
       <Flex
@@ -26,24 +31,14 @@ const Home = () => {
           padding="1rem"
           minWidth="100%"
         >
-          <Heading fontSize="5xl" color="gray.100" marginBottom="1rem">
+          <Heading fontSize="5xl" color="#eeeeee" marginBottom="1rem">
             Welcome to Virtual Tours NL
           </Heading>
-          <Text
-            color="gray.100"
-            fontWeight="bold"
-            fontSize="lg"
-            margin="0.5rem"
-          >
+          <Text color="#eeeeee" fontWeight="bold" fontSize="lg" margin="0.5rem">
             Tour the vibrant and charming province of Newfoundland without ever
             leaving your home.
           </Text>
-          <Text
-            color="gray.100"
-            fontWeight="bold"
-            fontSize="lg"
-            margin="0.5rem"
-          >
+          <Text color="#eeeeee" fontWeight="bold" fontSize="lg" margin="0.5rem">
             Iconic historic sites, beautiful scenery, and much more awaits you.
           </Text>
           <Flex
@@ -57,7 +52,12 @@ const Home = () => {
             <Button colorScheme="blue" marginRight="0.25rem" color="black">
               Learn More
             </Button>
-            <Button colorScheme="teal" marginLeft="0.25rem" color="black">
+            <Button
+              colorScheme="teal"
+              marginLeft="0.25rem"
+              color="black"
+              onClick={() => scrollTo("Tours")}
+            >
               Book A Virtual Tour
             </Button>
           </Flex>
