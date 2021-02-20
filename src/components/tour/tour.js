@@ -1,23 +1,24 @@
 import React from "react";
-import { Box, Flex, Heading, Text, Icon, Image } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Heading,
+  Text,
+  IconButton,
+  Icon,
+  Image,
+} from "@chakra-ui/react";
 import { MdLocationOn } from "react-icons/md";
 import { FaStar } from "react-icons/fa";
 import { FiHeart } from "react-icons/fi";
-
-//title
-// description
-// star rating
-// location
-// price
-// favourite button
-// live / vr / 360 vid
 
 // TODO - make this a link
 
 const Tour = (props) => {
   return (
     <Box
-      maxW="sm"
+      width="100%"
+      height="30rem"
       borderWidth="1px"
       borderRadius="lg"
       overflow="hidden"
@@ -25,12 +26,15 @@ const Tour = (props) => {
       margin="0.5rem"
       position="relative"
     >
-      <Icon
-        as={FiHeart}
+      <IconButton
+        icon={<FiHeart />}
+        backgroundColor="transparent"
+        _hover={{ backgroundColor: "transparent" }}
         position="absolute"
         right="0"
         fontSize="1.5rem"
         margin="0.5rem"
+        color={props.heartColor}
       />
       <Box
         position="absolute"
@@ -43,13 +47,13 @@ const Tour = (props) => {
           {props.type}
         </Text>
       </Box>
-      <Image src={props.image} />
+      <Image src={props.image} height="18rem" width="100%" />
       <Box href={props.link} padding="1rem" marginX="0.5rem">
-        <Flex alignItems="center" marginTop="1rem" marginBottom="0">
-          <Heading as="h4" size="md" marginRight="0.5rem">
+        <Flex alignItems="center" marginTop="0.8rem" marginBottom="0">
+          <Heading as="h4" size="md" marginRight="0.4rem">
             {props.title}
           </Heading>
-          <Text marginRight="0.5rem">•</Text>
+          <Text marginRight="0.4rem">•</Text>
           <Icon as={FaStar} color="yellow.400" fontSize="lg" />
           <Text>{props.stars}</Text>
         </Flex>
