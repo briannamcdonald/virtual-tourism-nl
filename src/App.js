@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Footer from "./components/footer/footer";
 import Tours from "./components/tours/tours";
 import Restaurants from './components/restaurants/restaurants';
+import Map from "./components/map/map";
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
           </Route>
           <Route path="/restaurants">
             <Restaurants/>
+          </Route>
+          <Route path='/map' >
+            <Map/>
           </Route>
         </Switch>
       </Router>
