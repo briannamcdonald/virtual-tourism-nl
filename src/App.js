@@ -4,7 +4,8 @@ import Navbar from "./components/navbar/navbar";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Footer from "./components/footer/footer";
 import Tours from "./components/tours/tours";
-import Restaurants from './components/restaurants/restaurants';
+import About from "./components/about/about.js";
+import Restaurants from "./components/restaurants/restaurants";
 import Map from "./components/map/map";
 import Shop from "./components/shop/shop";
 
@@ -12,12 +13,13 @@ function App() {
   return (
     <div>
       <Router>
-      <Navbar />
+        <Navbar />
         <Switch>
           <Route exact path="/">
             <Home />
             <Tours />
-            <Map/>
+            <Map />
+            <About />
           </Route>
           <Route path="/restaurants">
             <Restaurants />
@@ -28,7 +30,6 @@ function App() {
         </Switch>
         <Footer />
       </Router>
-      
     </div>
   );
 }
