@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   Flex,
@@ -10,11 +10,13 @@ import {
 } from "@chakra-ui/react";
 import { MdLocationOn } from "react-icons/md";
 import { FaStar } from "react-icons/fa";
-import { FiHeart } from "react-icons/fi";
+import { AiOutlineHeart, AiTwotoneHeart } from "react-icons/ai";
 
 // TODO - make this a link
 
 const Tour = (props) => {
+  const [clicked, setClicked] = useState(false);
+
   return (
     <Box
       width="100%"
@@ -27,14 +29,24 @@ const Tour = (props) => {
       position="relative"
     >
       <IconButton
-        icon={<FiHeart />}
+        icon={
+          clicked ? (
+            <AiTwotoneHeart color="#F56565" />
+          ) : (
+            <AiOutlineHeart color={props.heartColor} />
+          )
+        }
         backgroundColor="transparent"
         _hover={{ backgroundColor: "transparent" }}
+        _active={{ backgroundColor: "transparent" }}
+        _focus={{
+          outline: "none",
+        }}
         position="absolute"
         right="0"
-        fontSize="1.5rem"
-        margin="0.5rem"
-        color={props.heartColor}
+        fontSize="1.8rem"
+        margin="0.2rem"
+        onClick={() => setClicked(!clicked)}
       />
       <Box
         position="absolute"
