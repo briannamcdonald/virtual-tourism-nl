@@ -38,7 +38,7 @@ function Map() {
                   },
                 }
             }
-          bootstrapURLKeys={{ key:'AIzaSyDcsyiSGGSg-9mlIUANv0jAbG-3Z4Xrlvs' }}
+          bootstrapURLKeys={{ key:'AIzaSyAt-X42ea_0ucia2XigZAJwaNOGkYlYQJ0' }}
           defaultCenter={defaultProps.center}
           defaultZoom={defaultProps.zoom}
           center={{

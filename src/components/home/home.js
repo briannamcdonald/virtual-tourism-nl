@@ -12,33 +12,35 @@ const Home = () => {
     <Box width="100%" height="90vh" textAlign="center" letterSpacing="wide">
       <Flex
         flexDirection="column"
-        backgroundColor="rgba(0, 0, 0, 0.5)"
         width="100%"
         height="90vh"
         justifyContent="center"
-        alignItems="center"
         position="absolute"
       >
         <Image
           width="100%"
           height="90vh"
+          padding="10px"
+          borderRadius="2rem"
           src={jellyBeanRowImage}
           position="absolute"
           zIndex="-999999"
         />
         <Box
-          backgroundColor="rgba(0, 0, 0, 0.6)"
-          padding="1rem"
-          minWidth="100%"
+          background="white"
+          padding="2rem"
+          ml="2rem"
+          maxWidth="500px"
+          borderRadius="1rem"
         >
-          <Heading fontSize="5xl" color="#eeeeee" marginBottom="1rem">
+          <Heading fontSize="5xl"  marginBottom="1rem">
             Welcome to Virtual Tours NL
           </Heading>
-          <Text color="#eeeeee" fontWeight="bold" fontSize="lg" margin="0.5rem">
+          <Text fontWeight="bold" fontSize="lg" margin="0.5rem">
             Tour the vibrant and charming province of Newfoundland without ever
             leaving your home.
           </Text>
-          <Text color="#eeeeee" fontWeight="bold" fontSize="lg" margin="0.5rem">
+          <Text fontWeight="bold" fontSize="lg" margin="0.5rem">
             Iconic historic sites, beautiful scenery, and much more awaits you.
           </Text>
           <Flex
@@ -49,13 +51,13 @@ const Home = () => {
             marginTop="1.5rem"
             marginBottom="0.2rem"
           >
-            <Button colorScheme="blue" marginRight="0.25rem" color="black">
+            <Button colorScheme="blue" marginRight="0.25rem" color="white">
               Learn More
             </Button>
             <Button
               colorScheme="teal"
               marginLeft="0.25rem"
-              color="black"
+              color="white"
               onClick={() => scrollTo("Tours")}
             >
               Book A Virtual Tour

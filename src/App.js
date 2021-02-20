@@ -10,8 +10,8 @@ import Map from "./components/map/map";
 function App() {
   return (
     <div>
-      <Navbar />
       <Router>
+      <Navbar />
         <Switch>
           <Route exact path="/">
             <Home />
@@ -22,8 +22,9 @@ function App() {
             <Restaurants />
           </Route>
         </Switch>
+        <Footer />
       </Router>
-      <Footer />
+      
     </div>
   );
 }
