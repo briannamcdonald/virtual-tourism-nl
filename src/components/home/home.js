@@ -32,7 +32,7 @@ const Home = () => {
           minWidth="100%"
         >
           <Heading fontSize="5xl" color="#eeeeee" marginBottom="1rem">
-            Welcome to Virtual Tours NL
+            Welcome to NL Life
           </Heading>
           <Text color="#eeeeee" fontWeight="bold" fontSize="lg" margin="0.5rem">
             Tour the vibrant and charming province of Newfoundland without ever
@@ -49,7 +49,12 @@ const Home = () => {
             marginTop="1.5rem"
             marginBottom="0.2rem"
           >
-            <Button colorScheme="blue" marginRight="0.25rem" color="black">
+            <Button
+              colorScheme="blue"
+              marginRight="0.25rem"
+              color="black"
+              onClick={() => scrollTo("About")}
+            >
               Learn More
             </Button>
             <Button
