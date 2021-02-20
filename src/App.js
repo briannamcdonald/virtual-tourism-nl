@@ -9,6 +9,7 @@ import {
   Link
 } from "react-router-dom";
 import Footer from './components/footer/footer';
+import Restaurants from './components/restaurants/restaurants';
 
 function App() {
   return (
@@ -16,8 +17,11 @@ function App() {
       <Navbar/>
     <Router>
       <Switch>
-          <Route path="/">
+          <Route exact path="/">
             <Home />
+          </Route>
+          <Route path="/restaurants">
+            <Restaurants/>
           </Route>
         </Switch>
     </Router>
