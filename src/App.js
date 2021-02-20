@@ -6,6 +6,7 @@ import Footer from "./components/footer/footer";
 import Tours from "./components/tours/tours";
 import Restaurants from './components/restaurants/restaurants';
 import Map from "./components/map/map";
+import Shop from "./components/shop/shop";
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
           </Route>
           <Route path="/restaurants">
             <Restaurants />
+          </Route>
+          <Route path="/shop">
+            <Shop />
           </Route>
         </Switch>
         <Footer />
