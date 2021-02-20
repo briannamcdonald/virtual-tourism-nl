@@ -4,10 +4,20 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {ChakraProvider} from "@chakra-ui/react";
+import Fonts from "./font";
+import { extendTheme } from '@chakra-ui/react';
+
+const theme = extendTheme({
+  fonts: {
+    heading: "Nunito",
+    body: "Nunito",
+  },
+})
 
 ReactDOM.render(
   <React.StrictMode>
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
+      <Fonts/>
       <App />
     </ChakraProvider>
   </React.StrictMode>,

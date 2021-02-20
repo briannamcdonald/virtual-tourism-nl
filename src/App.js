@@ -6,24 +6,26 @@ import Footer from "./components/footer/footer";
 import Tours from "./components/tours/tours";
 import About from "./components/about/about.js";
 import Restaurants from "./components/restaurants/restaurants";
+import Map from "./components/map/map";
 
 function App() {
   return (
     <div>
-      <Navbar />
       <Router>
+        <Navbar />
         <Switch>
           <Route exact path="/">
             <Home />
             <Tours />
             <About />
+            <Map />
           </Route>
           <Route path="/restaurants">
             <Restaurants />
           </Route>
         </Switch>
+        <Footer />
       </Router>
-      <Footer />
     </div>
   );
 }
