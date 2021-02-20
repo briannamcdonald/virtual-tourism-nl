@@ -8,6 +8,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import Footer from './components/footer/footer';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           </Route>
         </Switch>
     </Router>
+    <Footer/>
     </div>
   );
 }
