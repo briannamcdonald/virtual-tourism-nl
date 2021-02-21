@@ -58,5 +58,4 @@ function MapTooltip({lat,lng,text,imageUrl,isOpen, onToggle,setIsOpen, right, to
 }
 
 export default MapTooltip;
-const colors = ['#d71b3b','#e8d71e','#16acea','#4203c9']
 

@@ -11,6 +11,9 @@ function Navbar() {
         height="60px"/>
         </Link>
         <Box d="flex">
+          <Link to="/shop">
+            <Text fontWeight="semibold" mr="20px">Shops</Text>
+          </Link>
           <Link to="/restaurants">
             <Text fontWeight="semibold" mr="20px">Restaurants</Text>
           </Link>
