@@ -29,7 +29,7 @@ const Home = () => {
         <Box
           background="white"
           padding="2rem"
-          ml="2rem"
+          ml="2.4rem"
           maxWidth="500px"
           borderRadius="1rem"
         >
