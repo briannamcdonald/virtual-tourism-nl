@@ -27,10 +27,10 @@ function Footer(){
             <Flex margin="10px" justifyContent="space-between">
                 <Text fontSize="0.8rem">&copy; 2021 NL Life. All Rights Reserved.</Text>
                 <Flex minW="150px" justifyContent="space-between">
-                    <FaFacebook />
-                    <FaInstagram/>
-                    <FaPinterest/>
-                    <FaTwitter/>
+                    <FaFacebook color="#4299E1" />
+                    <FaInstagram color="#E1B43D"  />
+                    <FaPinterest color="#F56565" />
+                    <FaTwitter color="#38B2AC"/>
                 </Flex>
             </Flex>
         </Box>
