@@ -18,6 +18,7 @@ const About = () => {
         padding="0.5rem"
         paddingBottom="0.1rem"
         margin="0 auto"
+        marginBottom="4rem"
       >
         <Heading marginY="1rem">About NL Life</Heading>
         <Flex>
