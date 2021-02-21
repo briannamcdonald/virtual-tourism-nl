@@ -4,6 +4,14 @@ import data from './json-data';
 import { Box, Heading, Wrap, WrapItem, Text,Image, Flex, Input } from "@chakra-ui/react";
 
 function Restaurants() {
+    
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+          })
+    },[])
     return(
         <div>
             <Box width="90%" p="20"pb="10" minH="70vh" display="flex">

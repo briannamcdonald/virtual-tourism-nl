@@ -1,5 +1,5 @@
-import React from "react";
-import { Box, Flex, Heading, IconButton, Button } from "@chakra-ui/react";
+import React, { useState } from "react";
+import { Box, Flex, Heading, IconButton, Button, useDisclosure } from "@chakra-ui/react";
 import { FaArrowCircleRight } from "react-icons/fa";
 import { FaArrowCircleLeft } from "react-icons/fa";
 import { FaAngleDoubleRight } from "react-icons/fa";
@@ -19,8 +19,11 @@ import grosMorneVideo from "./videos/grosTour.mp4";
 import signalHillVideo from "./videos/signalTour.mp4";
 import jellyBeanRowVideo from "./videos/jellybeanTour.mp4";
 import lanseAuxMeadowsVideo from "./videos/meadowsTour.mp4";
+import ReservationPopUp from "../Reservation/reservation";
 
 const Tours = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const [popUpData,setPopUpDate] = useState({title:'',type:''});
   return (
     <Box
       width={["100%", "95%"]}
@@ -54,6 +57,8 @@ const Tours = () => {
             video={whaleVideo}
             stars="4.96"
             type="LIVE"
+            setPopUpDate={setPopUpDate}
+            onOpen={onOpen}
             heartColor="black"
           />
           <Tour
@@ -66,6 +71,8 @@ const Tours = () => {
             video={icebergVideo}
             stars="5.00"
             type="LIVE"
+            setPopUpDate={setPopUpDate}
+            onOpen={onOpen}
             heartColor="white"
           />
           <Tour
@@ -79,6 +86,8 @@ const Tours = () => {
             stars="4.89"
             type="Virtual Reality"
             heartColor="white"
+            setPopUpDate={setPopUpDate}
+            onOpen={onOpen}
           />
           <IconButton
             icon={<FaArrowCircleRight />}
@@ -107,6 +116,8 @@ const Tours = () => {
               stars="4.92"
               type="360° Video Tour"
               heartColor="white"
+            setPopUpDate={setPopUpDate}
+            onOpen={onOpen}
             />
             <Tour
               title="Jelly Bean Row"
@@ -119,6 +130,8 @@ const Tours = () => {
               stars="5.00"
               type="LIVE"
               heartColor="white"
+            setPopUpDate={setPopUpDate}
+            onOpen={onOpen}
             />
             <Tour
               title="L'Anse aux Meadows"
@@ -131,6 +144,8 @@ const Tours = () => {
               stars="4.85"
               type="Virtual Reality"
               heartColor="black"
+            setPopUpDate={setPopUpDate}
+            onOpen={onOpen}
             />
             <IconButton
               icon={<FaArrowCircleRight />}
@@ -147,6 +162,7 @@ const Tours = () => {
           See All Experiences
         </Button>
       </Flex>
+      <ReservationPopUp data={popUpData} isOpen={isOpen} onClose={onClose}/>
     </Box>
   );
 };

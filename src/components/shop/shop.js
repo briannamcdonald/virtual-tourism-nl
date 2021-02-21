@@ -1,5 +1,5 @@
 import { Box, Button, Flex, Heading, Input, Text, Wrap, WrapItem } from "@chakra-ui/react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Product from "./product";
 
 function Shop(){
@@ -7,6 +7,13 @@ function Shop(){
     const onClick = (category) => {
         setCategory(category)
     }
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+          })
+    },[])
     return(
         <Box p="1" minH="90vh">
             <Box background='rgba(66, 3, 201, 0.8)' minH="350px"

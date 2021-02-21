@@ -16,9 +16,18 @@ import { AiOutlineHeart, AiTwotoneHeart } from "react-icons/ai";
 
 const Tour = (props) => {
   const [clicked, setClicked] = useState(false);
-
+  const onClick = () => {
+    props.setPopUpDate({
+      title:props.title,
+      type:props.type,
+      price:props.price
+    })
+    props.onOpen()
+  }
   return (
     <Box
+      onClick={onClick}
+      cursor="pointer"
       width="100%"
       height="28rem"
       borderWidth="1px"
