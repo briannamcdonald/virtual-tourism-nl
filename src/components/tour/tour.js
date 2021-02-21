@@ -46,6 +46,7 @@ const Tour = (props) => {
         right="0"
         fontSize="1.8rem"
         margin="0.2rem"
+        zIndex="1"
         onClick={() => setClicked(!clicked)}
       />
       <Box

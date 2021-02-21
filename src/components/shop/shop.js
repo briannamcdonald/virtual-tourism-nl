@@ -64,32 +64,32 @@ export default Shop;
 const data = [{
     imageUrl:'/Images/product1.PNG',
     name:'Plate | Ornament',
-    price:'40:00',
+    price:'40.00',
     seller:'Grandmudder',
 },{
     imageUrl:'/Images/product2.jpg',
     name:'Barrel | Ornament',
-    price:'100:00',
+    price:'100.00',
     seller:'Skipper',
 },{
     imageUrl:'/Images/product3.jpg',
     name:'Art | Ornament',
-    price:'50:00',
+    price:'50.00',
     seller:'Grandmudder',
 },{
     imageUrl:'/Images/product5.jpg',
     name:'Sweater',
-    price:'60:00',
+    price:'60.00',
     seller:'Steve up da road',
 },{
     imageUrl:'/Images/product5.jpg',
     name:'Sweater',
-    price:'20:00',
+    price:'20.00',
     seller:'Whiskers the cat and co',
 },{
     imageUrl:'/Images/product6.jpg',
     name:'T- Shirt',
-    price:'15:00',
+    price:'15.00',
     seller:'Iceberg Enthusiasts',
 }]
 
