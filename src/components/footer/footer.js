@@ -3,8 +3,9 @@ import { FaInstagram, FaFacebook,FaPinterest, FaTwitter } from 'react-icons/fa';
 
 function Footer(){
     return(
-        <Box margin="20px">
-            <Flex justifyContent="space-evenly" height="150px">
+        <Box margin="20px" marginTop="0px">
+            <hr/>
+            <Flex justifyContent="space-evenly" height="150px" marginTop="20px" >
                 <Flex p="10px" flexDirection="column">
                     <Text fontWeight="bold" >Policies</Text>
                     <Link>Terms of Service</Link>
