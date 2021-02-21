@@ -5,17 +5,25 @@ import { FaArrowCircleLeft } from "react-icons/fa";
 import { FaAngleDoubleRight } from "react-icons/fa";
 
 import Tour from "../tour/tour";
+// images
 import whaleImage from "./images/whale.png";
 import icebergImage from "./images/iceberg.png";
 import grosMorneImage from "./images/gros-morne.png";
 import signalHillImage from "./images/signal-hill.png";
 import jellyBeanRowImage from "./images/jellybeanrow.png";
 import lanseAuxMeadowsImage from "./images/lanse-aux-meadows.png";
+// videos
+import whaleVideo from "./videos/whaleTour.mp4";
+import icebergVideo from "./videos/icebergTour.mp4";
+import grosMorneVideo from "./videos/grosTour.mp4";
+import signalHillVideo from "./videos/signalTour.mp4";
+import jellyBeanRowVideo from "./videos/jellybeanTour.mp4";
+import lanseAuxMeadowsVideo from "./videos/meadowsTour.mp4";
 
 const Tours = () => {
   return (
     <Box
-      width={["100%", "90%"]}
+      width={["100%", "95%"]}
       alignItems="center"
       justifyContent="center"
       padding="0.5rem"
@@ -27,7 +35,7 @@ const Tours = () => {
         Explore NL with Virtual Tours
       </Heading>
       <Flex flexDirection="column">
-        <Heading marginLeft="2.5rem" fontSize="2xl">
+        <Heading marginLeft="3rem" fontSize="2xl">
           Bestsellers
         </Heading>
         <Flex alignItems="center" justifyContent="center" minWidth="100%">
@@ -43,6 +51,7 @@ const Tours = () => {
             link="/"
             price="16"
             image={whaleImage}
+            video={whaleVideo}
             stars="4.96"
             type="LIVE"
             heartColor="black"
@@ -54,6 +63,7 @@ const Tours = () => {
             link="/"
             price="12"
             image={icebergImage}
+            video={icebergVideo}
             stars="5.00"
             type="LIVE"
             heartColor="white"
@@ -65,6 +75,7 @@ const Tours = () => {
             link="/"
             price="24"
             image={grosMorneImage}
+            video={grosMorneVideo}
             stars="4.89"
             type="Virtual Reality"
             heartColor="white"
@@ -76,7 +87,7 @@ const Tours = () => {
           />
         </Flex>
         <Flex flexDirection="column" marginTop="2rem">
-          <Heading marginLeft="2.5rem" fontSize="2xl">
+          <Heading marginLeft="3rem" fontSize="2xl">
             Historic & Cultural
           </Heading>
           <Flex alignItems="center" justifyContent="center" minWidth="100%">
@@ -92,6 +103,7 @@ const Tours = () => {
               link="/"
               price="12"
               image={signalHillImage}
+              video={signalHillVideo}
               stars="4.92"
               type="360° Video Tour"
               heartColor="white"
@@ -103,6 +115,7 @@ const Tours = () => {
               link="/"
               price="14"
               image={jellyBeanRowImage}
+              video={jellyBeanRowVideo}
               stars="5.00"
               type="LIVE"
               heartColor="white"
@@ -114,6 +127,7 @@ const Tours = () => {
               link="/"
               price="20"
               image={lanseAuxMeadowsImage}
+              video={lanseAuxMeadowsVideo}
               stars="4.85"
               type="Virtual Reality"
               heartColor="black"
