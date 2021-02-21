@@ -2,7 +2,7 @@ import { Box, Image, Heading, Text } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 function Navbar() {
     return (
-      <Box p="10px" ml="10%" mr="10%" d="flex" 
+      <Box p="10px" pb="0" ml="10%" mr="10%" d="flex" 
       alignItems="center" justifyContent="space-between">
         <Link to='/'>
         <Image src='/Images/nav-logo.png' 
