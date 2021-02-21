@@ -1,11 +1,16 @@
-import { Box, Flex, Text,Link } from "@chakra-ui/react";
+import { Box, Flex, Text,Link} from "@chakra-ui/react";
 import { FaInstagram, FaFacebook,FaPinterest, FaTwitter } from 'react-icons/fa';
-
+import { Link as RouterLink } from 'react-router-dom';
 function Footer(){
     return(
         <Box margin="20px" marginTop="0px">
             <hr/>
             <Flex justifyContent="space-evenly" height="150px" marginTop="20px" >
+            <Flex p="10px" flexDirection="column">
+                    <Text fontWeight="bold" >Quick Links</Text>
+                    <Link><RouterLink to='/restaurants' >Restaurants</RouterLink></Link>
+                    <Link><RouterLink to='/shop'>Shops</RouterLink></Link>
+                </Flex>
                 <Flex p="10px" flexDirection="column">
                     <Text fontWeight="bold" >Policies</Text>
                     <Link>Terms of Service</Link>
