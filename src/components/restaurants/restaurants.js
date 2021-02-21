@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import {RestaurantCard} from "./restaurant-card";
 import data from './json-data';
-import { Box, Heading, Wrap, WrapItem, Text,Image } from "@chakra-ui/react";
+import { Box, Heading, Wrap, WrapItem, Text,Image, Flex, Input } from "@chakra-ui/react";
 
 function Restaurants() {
     return(
@@ -9,7 +9,7 @@ function Restaurants() {
             <Box width="90%" p="20"pb="10" minH="70vh" display="flex">
                 <Box width="40%" display="flex" justifyContent="center" flexDirection="column">
                     <Heading>Dine At Your Favourite Restaurant, Safe</Heading>
-                    <Text>Some random text</Text>
+                    <Text>Find A Local Restaurant</Text>
                 </Box>
                 <Box width="60%" display="flex">
                     <Image src='/images/dine-in.jpg' mr="10"
@@ -25,6 +25,22 @@ function Restaurants() {
                 </Box>
             </Box>
             <Box width="100%" p="10">
+            <Flex justifyContent="space-between" p="10px">
+                <Text>Book outdoor dining</Text>
+                <Input width="250px" placeholder="Search Restaurants"/>
+            </Flex>
+            <Wrap spacing="30px">
+            {data.map(el => ( 
+                <WrapItem key={el.title}  >
+                    <RestaurantCard  property={el} />
+                </WrapItem> )      
+            )}
+            </Wrap>
+            </Box>
+            <Box width="100%" p="10">
+            <Flex  p="10px">
+                <Text>Order takeout</Text>
+            </Flex>
             <Wrap spacing="30px">
             {data.map(el => ( 
                 <WrapItem key={el.title}  >
@@ -37,3 +53,4 @@ function Restaurants() {
     )
 }
 export default Restaurants;
+
