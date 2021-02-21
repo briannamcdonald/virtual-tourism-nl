@@ -16,7 +16,7 @@ function Restaurants() {
         <div>
             <Box width="90%" p="20"pb="10" minH="70vh" display="flex">
                 <Box width="40%" display="flex" justifyContent="center" flexDirection="column">
-                    <Heading>Dine At Your Favourite Restaurant, Safe</Heading>
+                    <Heading>Dine At Your Favourite Restaurant, Safely</Heading>
                     <Text>Find A Local Restaurant</Text>
                 </Box>
                 <Box width="60%" display="flex">
