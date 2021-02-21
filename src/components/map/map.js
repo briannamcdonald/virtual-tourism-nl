@@ -92,7 +92,7 @@ const mapPointers = [
         top:-10,
         right:-5
     },{
-        title:'The rooms',
+        title:'The Rooms',
         lat:47.566322188704454,  
         lng:-52.71197510224843,
         imageUrl:'/Images/the-rooms.PNG',

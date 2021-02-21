@@ -20,7 +20,7 @@ const Tour = (props) => {
   return (
     <Box
       width="100%"
-      height="30rem"
+      height="28rem"
       borderWidth="1px"
       borderRadius="lg"
       overflow="hidden"
@@ -46,6 +46,7 @@ const Tour = (props) => {
         right="0"
         fontSize="1.8rem"
         margin="0.2rem"
+        zIndex="1"
         onClick={() => setClicked(!clicked)}
       />
       <Box
@@ -59,19 +60,30 @@ const Tour = (props) => {
           {props.type}
         </Text>
       </Box>
-      <Image src={props.image} height="18rem" width="100%" />
+      <video
+        style={{ height: "18rem", width: "100%", objectFit: "fill" }}
+        poster={props.image}
+        onMouseOver={(event) => event.target.play()}
+        onMouseOut={(event) => event.target.pause()}
+        src={props.video}
+      ></video>
       <Box href={props.link} padding="1rem" marginX="0.5rem">
-        <Flex alignItems="center" marginTop="0.8rem" marginBottom="0">
-          <Heading as="h4" size="md" marginRight="0.4rem">
+        <Flex
+          alignItems="center"
+          marginTop={
+            props.title === "Gros Morne National Park" ? "0.1rem" : "0.8rem"
+          }
+          marginBottom="0"
+          position="relative"
+        >
+          <Heading as="h4" size="md" marginRight="0.4rem" maxW="250px">
             {props.title}
           </Heading>
-          <Text marginRight="0.4rem">•</Text>
-          <Icon as={FaStar} color="yellow.400" fontSize="lg" />
-          <Text>{props.stars}</Text>
+          <Flex position="absolute" top="0" right="0">
+            <Icon as={FaStar} color="yellow.400" fontSize="lg" />
+            <Text>{props.stars}</Text>
+          </Flex>
         </Flex>
-        <Text marginY="1rem" marginTop="0">
-          {props.description}
-        </Text>
         <Flex flexDirection="row" marginY="1rem">
           <Icon as={MdLocationOn} fontSize="xl" color="red.400" />
           <Text>{props.location}</Text>

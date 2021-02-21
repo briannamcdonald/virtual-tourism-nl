@@ -44,7 +44,7 @@ function MapTooltip({lat,lng,text,imageUrl,isOpen, onToggle,setIsOpen, right, to
                 <Text>{4}</Text>
             </Flex>
             <Box pl="10px" pb="5px" d="flex">
-                <Text>Tour Type : </Text>
+                <Text>Tour Type:&nbsp; </Text>
                 <Text>{type}</Text>
             </Box>
             <Box pr="20px" pb="10px" d="flex" justifyContent="flex-end">

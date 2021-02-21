@@ -10,7 +10,7 @@ import {
 
 const About = () => {
   return (
-    <Box backgroundColor="#eeeeee" width="100%" marginTop="2rem" id="About">
+    <Box backgroundColor="#eeeeee" width="100%" marginTop="3.5rem" id="About">
       <Box
         width={["100%", "90%"]}
         alignItems="center"
@@ -125,14 +125,22 @@ const About = () => {
             width="100%"
             alignItems="center"
             justifyContent="center"
+            position="relative"
+            marginBottom="2.5rem"
           >
             <Image
               src={NLImage}
-              //boxSize="40%"
-              marginY="auto"
-              marginLeft="1rem"
-              verticalAlign="center"
               boxShadow="5px 6px 10px rgba(0, 0, 0, 0.3)"
+              width="auto"
+              height="auto"
+              maxH="100%"
+              maxW="100%"
+              position="absolute"
+              top="0"
+              bottom="0"
+              left="0"
+              right="0"
+              margin="auto"
             />
           </Box>
         </Flex>
