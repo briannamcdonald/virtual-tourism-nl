@@ -27,7 +27,7 @@ function ReservationPopUp({isOpen,onClose,data}){
                     </Flex>
                     <Flex justifyContent="space-between" m="10px" mt="25px">
                         <Box>
-                            <Text fontWeight="bold">Mon,Feb 22</Text>
+                            <Text fontWeight="bold">Mon, Feb 22</Text>
                             <Text>10:00 a.m - 11:30 a.m</Text>
                         </Box>
                         <Box>
@@ -37,7 +37,7 @@ function ReservationPopUp({isOpen,onClose,data}){
                     </Flex >
                     <Flex justifyContent="space-between" m="10px"  mt="25px">
                         <Box>
-                            <Text fontWeight="bold">Mon,Feb 22</Text>
+                            <Text fontWeight="bold">Mon, Feb 22</Text>
                             <Text>01:00 p.m - 02:30 p.m</Text>
                         </Box>
                         <Box>
@@ -47,7 +47,7 @@ function ReservationPopUp({isOpen,onClose,data}){
                     </Flex>
                     <Flex justifyContent="space-between" m="10px"  mt="25px">
                         <Box>
-                            <Text fontWeight="bold">Mon,Feb 22</Text>
+                            <Text fontWeight="bold">Mon, Feb 22</Text>
                             <Text>02:45 p.m - 06:15 p.m</Text>
                         </Box>
                         <Box>

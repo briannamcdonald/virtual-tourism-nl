@@ -6,13 +6,10 @@ import {
   Text,
   IconButton,
   Icon,
-  Image,
 } from "@chakra-ui/react";
 import { MdLocationOn } from "react-icons/md";
 import { FaStar } from "react-icons/fa";
 import { AiOutlineHeart, AiTwotoneHeart } from "react-icons/ai";
-
-// TODO - make this a link
 
 const Tour = (props) => {
   const [clicked, setClicked] = useState(false);

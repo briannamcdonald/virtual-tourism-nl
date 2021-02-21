@@ -34,13 +34,13 @@ const Home = () => {
           borderRadius="1rem"
         >
           <Heading fontSize="5xl" color="black" marginBottom="1rem">
-            Welcome to NL Life
+            Welcome to<br /> NL Life
           </Heading>
-          <Text fontWeight="bold" fontSize="lg" margin="0.5rem">
+          <Text fontWeight="bold" fontSize="lg" margin="0.5rem" marginBottom="0.6rem">
             Tour the vibrant and charming province of Newfoundland without ever
             leaving your home.
           </Text>
-          <Text fontWeight="bold" fontSize="lg" margin="0.5rem">
+          <Text fontWeight="bold" fontSize="lg" margin="0.5rem" marginTop="0.6rem">
             Iconic historic sites, beautiful scenery, and much more awaits you.
           </Text>
           <Flex

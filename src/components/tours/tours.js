@@ -5,6 +5,7 @@ import { FaArrowCircleLeft } from "react-icons/fa";
 import { FaAngleDoubleRight } from "react-icons/fa";
 
 import Tour from "../tour/tour";
+import ReservationPopUp from "../Reservation/reservation";
 // images
 import whaleImage from "./images/whale.png";
 import icebergImage from "./images/iceberg.png";
@@ -19,7 +20,6 @@ import grosMorneVideo from "./videos/grosTour.mp4";
 import signalHillVideo from "./videos/signalTour.mp4";
 import jellyBeanRowVideo from "./videos/jellybeanTour.mp4";
 import lanseAuxMeadowsVideo from "./videos/meadowsTour.mp4";
-import ReservationPopUp from "../Reservation/reservation";
 
 const Tours = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
