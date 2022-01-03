@@ -38,7 +38,7 @@ function Map() {
                   },
                 }
             }
-          bootstrapURLKeys={{ key:'AIzaSyAt-X42ea_0ucia2XigZAJwaNOGkYlYQJ0' }}
+          bootstrapURLKeys={{ key:process.env.GOOGLE_MAPS }}
           defaultCenter={defaultProps.center}
           defaultZoom={defaultProps.zoom}
           center={{
